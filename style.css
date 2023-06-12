@@ -1,8 +1,9 @@
 :root{
   --primary:#d0ad6c;
-
+  --background: #363435;
   --title: #FEFEFD;
   --paragraph:#C8C9CD;
+  --card-color:#191713;
 }
 html{
   margin: 0;
@@ -18,7 +19,7 @@ body{
 
 /*  HOME */
 .home{
-  height: 90vh;
+  height: 100vh;
   background-image: url(assets/Home-BG.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,6 +61,7 @@ h1{
   display: flex;
   justify-content: center;
   gap: 2rem;
+  padding-bottom: 2rem;
 }
 .buttons button{
   width: 10rem;
@@ -76,8 +78,89 @@ h1{
   }
 
 
+/*SOBRE NOS*/
+section.sobreNos{
+  position: relative;
+  top: -2rem;
+  padding: 5rem 7rem;
+  border-radius: 25px;
+  box-shadow: 0px -5px 10px -5px  black;
+  background-color: var(--background);
+}
+h2, h3{
+  text-transform: uppercase;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  width: fit-content;
+  color: var(--title);
+  border-bottom: solid 4px var(--primary);
+}
+ h3{
+  border-bottom-width: 2px;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+p, li{
+  text-align: justify;
+}
+
+/*SERVIÇOS*/
+#serviços{
+  margin-top: 3rem;
+}
+  /*cards*/
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.card{
+  width: 30%;
+  height: 30rem;
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 0px 0px 15px -5px black;
+  background-color: var(--card-color);
+  overflow-y: auto;
+  
+}
+  
+  .card::-webkit-scrollbar-thumb{
+    background-color: var(--background);
+    border-radius: 50px;
+  }
+i.card-icon{
+  font-size: 7rem;
+  color: var(--primary);
+}
+p.card-title{
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+p.card-text{
+  text-align: center;
+}
+
 
 /*responsividade*/
+@media screen and (max-width:768px) {
+  h1{
+    font-size: 3rem;
+  }
+  section.sobreNos{
+    padding: 4rem;
+  }
+  .cards{
+    display: block;
+  }
+  .card{
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+  }
+}
 @media screen and (max-width:425px){
   h1{
     font-size: 2rem;
@@ -86,10 +169,10 @@ h1{
     width: 8rem;
     font-size: 0.8rem;
   }
-}
-
-@media screen and (max-width:768px) and (min-width:425px){
-  h1{
-    font-size: 3rem;
+  section.sobreNos{
+    padding: 2rem;
+  }
+  .card{
+    width: 100%;
   }
 }
