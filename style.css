@@ -14,6 +14,7 @@ body{
   font: 400 1rem 'hahmlet';
   color: var(--paragraph);
   text-align: center;
+  background-color: var(--background);
 }
 
 
@@ -81,10 +82,10 @@ h1{
 /*SOBRE NOS*/
 section.sobreNos{
   position: relative;
-  top: -2rem;
-  padding: 5rem 7rem;
+  bottom: 2rem;
+  padding: 5rem 7rem 0;
   border-radius: 25px;
-  box-shadow: 0px -5px 10px -5px  black;
+  box-shadow: 0px -10px 10px -5px  black;
   background-color: var(--background);
 }
 h2, h3{
@@ -119,7 +120,7 @@ p, li{
   height: 30rem;
   padding: 1rem;
   border-radius: 25px;
-  box-shadow: 0px 0px 15px -5px black;
+  box-shadow: 0px 0px 10px -5px black;
   background-color: var(--card-color);
   overflow-y: auto;
   
@@ -143,6 +144,31 @@ p.card-text{
   text-align: center;
 }
 
+/*DICAS IMPORTANTES section-2*/
+.translate{
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  bottom: -1rem;
+  box-shadow: 0 10px 10px -5px black;
+  border-radius: 0px 0px 25px 25px;
+  background-color: var(--background);
+  z-index: 2;
+}
+section.dicas{
+  position: relative;
+  height: 100vh;
+  background-image: url(assets/airport.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 7rem;
+}
+section.dicas p{
+  padding-bottom: 2rem;
+}
+
+
 
 /*responsividade*/
 @media screen and (max-width:768px) {
@@ -160,6 +186,12 @@ p.card-text{
     margin-bottom: 2rem;
     margin-inline: auto;
   }
+  section.dicas{
+    height: 100%;
+  }
+  section.dicas p{
+    padding-bottom: 1rem;
+  }
 }
 @media screen and (max-width:425px){
   h1{
@@ -169,10 +201,14 @@ p.card-text{
     width: 8rem;
     font-size: 0.8rem;
   }
-  section.sobreNos{
+  section.sobreNos, section.dicas{
     padding: 2rem;
   }
   .card{
     width: 100%;
+  }
+  section.dicas{
+    background-position: 35% center;
+    
   }
 }
