@@ -2,7 +2,8 @@
   --primary:#d0ad6c;
   --background: #363435;
   --title: #FEFEFD;
-  --paragraph:#C8C9CD;
+  --paragraph:#c8c9cd;
+  --gradient: #898B93;
   --card-color:#191713;
 }
 html{
@@ -168,9 +169,97 @@ section.dicas p{
   padding-bottom: 2rem;
 }
 
+/*CONTATO E FORMULÁRIO*/
+section.contato-forms{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'contato forms';
+}
+.h2-pequeno{
+  font-size: 1.4rem;
+}
+.contato{
+  grid-area: 'contato';
+  background-color: var(--background);
+  margin-inline: auto;
+  padding-top: 2rem;
+}
+.contato p{
+  color: var(--gradient);
+}
+  .contato-informação{
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .contato-informação i{
+    font-size: 2rem;
+    color: var(--primary);
+  }
+  p.informações-subtitulo{
+    font-weight: 700;
+    font-size: 1rem;
+  }
 
 
-/*responsividade*/
+/*FORMULÁRIO*/
+.formulario{
+  grid-area: 'forms';
+  background-image: linear-gradient(60deg, var(--background), var(--gradient));
+  background-size: 100% 200%;
+  padding-top: 2rem;
+}
+.enviar-form-titulo{
+  text-transform: lowercase;
+  border: none;
+  color: var(--background);
+}
+form{
+  width: 70%;
+  margin-inline: auto;
+}
+label{
+  text-align: left;
+  display: block;
+  color: var(--background);
+  font-weight: 700;
+}
+input, textarea{
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: var(--background);
+  border-style: none;
+  margin-bottom: 1rem;
+}
+textarea{
+  height: 7rem;
+}
+
+.form-button{
+  width: 100%;
+  height: 2.5rem;
+  border-style: none;
+  border-radius: 10px;
+  background-color: var(--primary);
+  transition: all 300ms;
+}
+  .form-button:hover{
+    background-color: var(--background);
+    color: var(--primary);
+    transition: all 300ms;
+  }
+
+/*FOOTER*/
+footer{
+  background-color: var(--primary);
+}
+footer img{}
+
+/*RESPONSIVIDADE*/
 @media screen and (max-width:768px) {
   h1{
     font-size: 3rem;
@@ -192,6 +281,17 @@ section.dicas p{
   section.dicas p{
     padding-bottom: 1rem;
   }
+  section.contato-forms{
+    grid-template-columns: 1fr;
+    
+    grid-template-areas: 
+      'contato'
+      'forms';
+  }
+  form{
+    width: 85%;
+    padding-bottom: 2rem;
+  }
 }
 @media screen and (max-width:425px){
   h1{
@@ -211,4 +311,11 @@ section.dicas p{
     background-position: 35% center;
     
   }
+  .contato{
+    padding-inline: 1rem;
+  }
+  .contato-informação i{
+    font-size: 1.2rem;
+  }
+  
 }
