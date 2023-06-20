@@ -34,6 +34,7 @@ ul.navbar-nav{
   margin: auto;
   
 }
+
 #navigation li a{
   color: var(--primary);
 }
@@ -78,6 +79,10 @@ h1{
     transform: scale(1.1);
     transition: all 300ms;
   }
+.buttons button a{
+  color: var(--background);
+  text-decoration: none;
+}
 
 
 /*SOBRE NOS*/
@@ -107,7 +112,7 @@ p, li{
 }
 
 /*SERVIÇOS*/
-#serviços{
+#dicas{
   margin-top: 3rem;
 }
   /*cards*/
@@ -126,10 +131,8 @@ p, li{
   overflow-y: auto;
   
 }
-  
-  .card::-webkit-scrollbar-thumb{
-    background-color: var(--background);
-    border-radius: 50px;
+  .card::-webkit-scrollbar{
+    visibility: hidden;
   }
 i.card-icon{
   font-size: 7rem;
@@ -171,7 +174,7 @@ section.dicas p{
 
 /*CONTATO E FORMULÁRIO*/
 section.contato-forms{
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -255,9 +258,23 @@ textarea{
 
 /*FOOTER*/
 footer{
+  height: 100%;
   background-color: var(--primary);
+  padding: 5rem 7rem;
 }
-footer img{}
+footer div{
+  display: flex;
+  justify-content: space-between;
+}
+footer div img{
+  width: 5rem;
+}
+footer div p{
+  font: 700 1rem 'hahmlet';
+  color: var(--background);
+  align-self: center;
+}
+
 
 /*RESPONSIVIDADE*/
 @media screen and (max-width:768px) {
@@ -292,6 +309,19 @@ footer img{}
     width: 85%;
     padding-bottom: 2rem;
   }
+  footer{
+    height: 100%;
+    padding: 2rem;
+  }
+  footer div{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer div img{
+    width: 5rem;
+  }
 }
 @media screen and (max-width:425px){
   h1{
@@ -317,5 +347,4 @@ footer img{}
   .contato-informação i{
     font-size: 1.2rem;
   }
-  
 }
