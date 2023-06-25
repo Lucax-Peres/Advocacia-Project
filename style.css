@@ -216,7 +216,6 @@ section.contato-forms{
   padding-top: 2rem;
 }
 .enviar-form-titulo{
-  text-transform: lowercase;
   border: none;
   color: var(--background);
 }
@@ -262,6 +261,7 @@ footer{
   background-color: var(--primary);
   padding: 5rem 7rem;
 }
+
 footer div{
   display: flex;
   justify-content: space-between;
