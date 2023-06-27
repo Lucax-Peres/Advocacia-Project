@@ -18,6 +18,14 @@ body{
   background-color: var(--background);
 }
 
+/*floating button*/
+#whatsapp{
+  position: fixed;
+  width: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+}
 
 /*  HOME */
 .home{
@@ -322,6 +330,11 @@ footer div p{
   footer div img{
     width: 5rem;
   }
+  #whatsapp{
+    width: 4rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
 @media screen and (max-width:425px){
   h1{
@@ -346,5 +359,10 @@ footer div p{
   }
   .contato-informação i{
     font-size: 1.2rem;
+  }
+  #whatsapp{
+    width: 3rem;
+    bottom: 1rem;
+    right: 1rem;
   }
 }
